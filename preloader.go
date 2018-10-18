@@ -16,7 +16,7 @@ func (preloader) Load(name string, h HandlerFunc, templateFiles ...string) (http
 	}, errors.Wrap(err, "failed preloading template")
 }
 
-// Creates a Loader that loads and parses the template when Load is called.
+// NewPreloader creates a Loader that loads and parses the template when Load is called.
 // If the template cannot be parsed, an error is returned as the result of Load.
 func NewPreloader() Loader {
 	return preloader{}

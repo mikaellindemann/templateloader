@@ -21,7 +21,7 @@ func (onRequestLoader) Load(name string, h HandlerFunc, templateFiles ...string)
 	}, nil
 }
 
-// Creates a Loader that loads and parses the template on each request.
+// NewOnRequestLoader creates a Loader that loads and parses the template on each request.
 // Useful for development, as changes to template files are reflected on the next request.
 // If the template cannot be parsed, the errors will show when the resulting handler is invoked.
 func NewOnRequestLoader() Loader {
